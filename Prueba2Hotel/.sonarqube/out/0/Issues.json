@@ -1,0 +1,428 @@
+{
+  "$schema": "http://json.schemastore.org/sarif-1.0.0",
+  "version": "1.0.0",
+  "runs": [
+    {
+      "tool": {
+        "name": "Microsoft (R) Visual C# Compiler",
+        "version": "4.12.0.0",
+        "fileVersion": "4.12.0-3.24570.6 (913fb4ec)",
+        "semanticVersion": "4.12.0",
+        "language": "en-US"
+      },
+      "results": [
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Cliente' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/joela/source/repos/PruebaParcial2/Prueba2Hotel/Prueba2Hotel/AppDBContext.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 16,
+                  "endLine": 13,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/joela/source/repos/PruebaParcial2/Prueba2Hotel/Prueba2Hotel/AppDBContext.cs",
+                "region": {
+                  "startLine": 15,
+                  "startColumn": 31,
+                  "endLine": 15,
+                  "endColumn": 38
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Habitacion' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/joela/source/repos/PruebaParcial2/Prueba2Hotel/Prueba2Hotel/AppDBContext.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 16,
+                  "endLine": 13,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/joela/source/repos/PruebaParcial2/Prueba2Hotel/Prueba2Hotel/AppDBContext.cs",
+                "region": {
+                  "startLine": 16,
+                  "startColumn": 34,
+                  "endLine": 16,
+                  "endColumn": 44
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Reserva' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/joela/source/repos/PruebaParcial2/Prueba2Hotel/Prueba2Hotel/AppDBContext.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 16,
+                  "endLine": 13,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/joela/source/repos/PruebaParcial2/Prueba2Hotel/Prueba2Hotel/AppDBContext.cs",
+                "region": {
+                  "startLine": 17,
+                  "startColumn": 31,
+                  "endLine": 17,
+                  "endColumn": 38
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'ServiciosAdicionales' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/joela/source/repos/PruebaParcial2/Prueba2Hotel/Prueba2Hotel/AppDBContext.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 16,
+                  "endLine": 13,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/joela/source/repos/PruebaParcial2/Prueba2Hotel/Prueba2Hotel/AppDBContext.cs",
+                "region": {
+                  "startLine": 18,
+                  "startColumn": 44,
+                  "endLine": 18,
+                  "endColumn": 64
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'SqlServer:Identity' 4 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/joela/source/repos/PruebaParcial2/Prueba2Hotel/Prueba2Hotel/Migrations/20250116215109_CreationDatabase.cs",
+                "region": {
+                  "startLine": 19,
+                  "startColumn": 37,
+                  "endLine": 19,
+                  "endColumn": 57
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/joela/source/repos/PruebaParcial2/Prueba2Hotel/Prueba2Hotel/Migrations/20250116215109_CreationDatabase.cs",
+                "region": {
+                  "startLine": 35,
+                  "startColumn": 37,
+                  "endLine": 35,
+                  "endColumn": 57
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/joela/source/repos/PruebaParcial2/Prueba2Hotel/Prueba2Hotel/Migrations/20250116215109_CreationDatabase.cs",
+                "region": {
+                  "startLine": 51,
+                  "startColumn": 37,
+                  "endLine": 51,
+                  "endColumn": 57
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/joela/source/repos/PruebaParcial2/Prueba2Hotel/Prueba2Hotel/Migrations/20250116215109_CreationDatabase.cs",
+                "region": {
+                  "startLine": 80,
+                  "startColumn": 37,
+                  "endLine": 80,
+                  "endColumn": 57
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'nvarchar(max)' 7 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/joela/source/repos/PruebaParcial2/Prueba2Hotel/Prueba2Hotel/Migrations/20250116215109_CreationDatabase.cs",
+                "region": {
+                  "startLine": 20,
+                  "startColumn": 57,
+                  "endLine": 20,
+                  "endColumn": 72
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/joela/source/repos/PruebaParcial2/Prueba2Hotel/Prueba2Hotel/Migrations/20250116215109_CreationDatabase.cs",
+                "region": {
+                  "startLine": 21,
+                  "startColumn": 59,
+                  "endLine": 21,
+                  "endColumn": 74
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/joela/source/repos/PruebaParcial2/Prueba2Hotel/Prueba2Hotel/Migrations/20250116215109_CreationDatabase.cs",
+                "region": {
+                  "startLine": 22,
+                  "startColumn": 57,
+                  "endLine": 22,
+                  "endColumn": 72
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/joela/source/repos/PruebaParcial2/Prueba2Hotel/Prueba2Hotel/Migrations/20250116215109_CreationDatabase.cs",
+                "region": {
+                  "startLine": 23,
+                  "startColumn": 59,
+                  "endLine": 23,
+                  "endColumn": 74
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/joela/source/repos/PruebaParcial2/Prueba2Hotel/Prueba2Hotel/Migrations/20250116215109_CreationDatabase.cs",
+                "region": {
+                  "startLine": 36,
+                  "startColumn": 55,
+                  "endLine": 36,
+                  "endColumn": 70
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/joela/source/repos/PruebaParcial2/Prueba2Hotel/Prueba2Hotel/Migrations/20250116215109_CreationDatabase.cs",
+                "region": {
+                  "startLine": 54,
+                  "startColumn": 56,
+                  "endLine": 54,
+                  "endColumn": 71
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/joela/source/repos/PruebaParcial2/Prueba2Hotel/Prueba2Hotel/Migrations/20250116215109_CreationDatabase.cs",
+                "region": {
+                  "startLine": 82,
+                  "startColumn": 62,
+                  "endLine": 82,
+                  "endColumn": 77
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null,
+              "3": null,
+              "4": null,
+              "5": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'Reserva' 5 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/joela/source/repos/PruebaParcial2/Prueba2Hotel/Prueba2Hotel/Migrations/20250116215109_CreationDatabase.cs",
+                "region": {
+                  "startLine": 47,
+                  "startColumn": 23,
+                  "endLine": 47,
+                  "endColumn": 32
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/joela/source/repos/PruebaParcial2/Prueba2Hotel/Prueba2Hotel/Migrations/20250116215109_CreationDatabase.cs",
+                "region": {
+                  "startLine": 91,
+                  "startColumn": 41,
+                  "endLine": 91,
+                  "endColumn": 50
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/joela/source/repos/PruebaParcial2/Prueba2Hotel/Prueba2Hotel/Migrations/20250116215109_CreationDatabase.cs",
+                "region": {
+                  "startLine": 98,
+                  "startColumn": 24,
+                  "endLine": 98,
+                  "endColumn": 33
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/joela/source/repos/PruebaParcial2/Prueba2Hotel/Prueba2Hotel/Migrations/20250116215109_CreationDatabase.cs",
+                "region": {
+                  "startLine": 103,
+                  "startColumn": 24,
+                  "endLine": 103,
+                  "endColumn": 33
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/joela/source/repos/PruebaParcial2/Prueba2Hotel/Prueba2Hotel/Migrations/20250116215109_CreationDatabase.cs",
+                "region": {
+                  "startLine": 119,
+                  "startColumn": 23,
+                  "endLine": 119,
+                  "endColumn": 32
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null,
+              "3": null
+            }
+          }
+        }
+      ],
+      "rules": {
+        "CS8618": {
+          "id": "CS8618",
+          "shortDescription": "Non-nullable field must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring as nullable.",
+          "defaultLevel": "warning",
+          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS8618)",
+          "properties": {
+            "category": "Compiler",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Compiler",
+              "Telemetry"
+            ]
+          }
+        },
+        "S1192": {
+          "id": "S1192",
+          "shortDescription": "String literals should not be duplicated",
+          "fullDescription": "Duplicated string literals make the process of refactoring complex and error-prone, as any change would need to be propagated on all occurrences.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1192",
+          "properties": {
+            "category": "Minor Code Smell",
+            "isEnabledByDefault": false,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "SonarWay"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
