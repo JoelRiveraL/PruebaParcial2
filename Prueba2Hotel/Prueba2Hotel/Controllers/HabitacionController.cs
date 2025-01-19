@@ -45,6 +45,13 @@ namespace Prueba2Hotel.Controllers
                 return Ok(new { message = mensaje });
             }
 
+            // Validar que el número de habitación no exista
+            var habitacionExistente = _appDBContext.Habitacion.FirstOrDefault(h => h.NumHabitacion == habitacion.NumHabitacion);
+            if (habitacionExistente != null)
+            {
+                return Ok(new { message = "El número de habitación ya existe." });
+            }
+
             habitacion.Estado = "Disponible";
 
             _appDBContext.Habitacion.Add(habitacion);
@@ -57,7 +64,7 @@ namespace Prueba2Hotel.Controllers
         {
             if (!ModelState.IsValid)
             {
-                // Errores validacion
+                // Errores de validación
                 var errores = ModelState.Values
                     .SelectMany(v => v.Errors)
                     .Select(e => e.ErrorMessage)
@@ -65,39 +72,39 @@ namespace Prueba2Hotel.Controllers
 
                 return Ok(new { message = "Errores de validación", errores });
             }
+
             if (NumHabitacion != habitacion.NumHabitacion)
             {
-                return Ok(new { message = "El numero de la habitación no coincide." });
+                return Ok(new { message = "El número de la habitación no coincide." });
             }
 
             UtilsHabitacion utilsHabitacion = new UtilsHabitacion(_appDBContext);
 
             string mensaje = utilsHabitacion.ValidarHabitacion(habitacion);
-
-            if (mensaje != "")
+            if (!string.IsNullOrEmpty(mensaje))
             {
                 return Ok(new { message = mensaje });
             }
 
-            // Mantener el valor de Numhabitacion porque no se deberia editar...
-            habitacion.NumHabitacion = NumHabitacion;
+            var habitacionExistente = await _appDBContext.Habitacion.FirstOrDefaultAsync(h => h.NumHabitacion == NumHabitacion);
+            if (habitacionExistente == null)
+            {
+                return Ok(new { message = "Habitación no encontrada." });
+            }
+
+            habitacionExistente.Tipo = habitacion.Tipo;
+            habitacionExistente.NumMaximoPersonas = habitacion.NumMaximoPersonas;
+            habitacionExistente.Descripcion = habitacion.Descripcion;
 
             try
             {
-                _appDBContext.Entry(habitacion).State = EntityState.Modified;
+                _appDBContext.Habitacion.Update(habitacionExistente);
                 await _appDBContext.SaveChangesAsync();
-                return NoContent();
+                return Ok(new { message = "Habitación actualizada exitosamente." });
             }
-            catch (DbUpdateConcurrencyException)
+            catch (DbUpdateConcurrencyException ex)
             {
-                if (!await _appDBContext.Habitacion.AnyAsync(h => h.NumHabitacion == NumHabitacion))
-                {
-                    return Ok(new { message = "Habitación no encontrada." });
-                }
-                else
-                {
-                    return Ok(new { message = "Error al actualizar la habitacion." });
-                }
+                return Ok(new { message = "Error al actualizar la habitación: " + ex.Message });
             }
             catch (Exception ex)
             {
@@ -183,13 +190,6 @@ namespace Prueba2Hotel.Controllers
             if (habitacion.Tipo == null)
             {
                 return "El tipo de habitación es requerido.";
-            }
-
-            // Validar que el número de habitación no exista
-            var habitacionExistente = _appDBContext.Habitacion.FirstOrDefault(h => h.NumHabitacion == habitacion.NumHabitacion);
-            if (habitacionExistente != null)
-            {
-                return "El número de habitación ya existe.";
             }
 
             // Validar el numero de personas

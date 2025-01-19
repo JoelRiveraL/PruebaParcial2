@@ -64,10 +64,7 @@ namespace Prueba2Hotel.Controllers
                 return Ok(new { message = "Errores de validación", errores });
             }
 
-            if (id != servicio.Id)
-            {
-                return Ok(new { message = "El ID del servicio no coincide." });
-            }
+            servicio.Id = id;
 
             UtilsServiciosAdicionales utilsServiciosAdicionales = new UtilsServiciosAdicionales(_appDBContext);
 
@@ -82,7 +79,7 @@ namespace Prueba2Hotel.Controllers
             {
                 _appDBContext.Entry(servicio).State = EntityState.Modified;
                 await _appDBContext.SaveChangesAsync();
-                return NoContent();
+                return Ok(new { message = servicio });
             }
             catch (DbUpdateConcurrencyException)
             {

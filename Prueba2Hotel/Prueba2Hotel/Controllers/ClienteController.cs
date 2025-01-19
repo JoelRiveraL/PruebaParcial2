@@ -45,17 +45,25 @@ namespace Prueba2Hotel.Controllers
                 return Ok(new { message = mensaje });
             }
 
+            if (_appDBContext.Cliente.Any(c => c.Cedula == cliente.Cedula))
+            {
+                return Ok(new { message = "Ya existe un cliente con esa cédula." });
+            }
+            if (_appDBContext.Cliente.Any(c => c.Telefono == cliente.Telefono))
+            {
+                return Ok(new { message = "Ya existe un cliente con ese teléfono." });
+            }
+
             _appDBContext.Cliente.Add(cliente);
             await _appDBContext.SaveChangesAsync();
             return Ok(cliente);
         }
-
         [HttpPut("{cedula}")]
         public async Task<IActionResult> PutCliente(string cedula, [FromBody] Cliente cliente)
         {
             if (!ModelState.IsValid)
             {
-                // Errores validacion
+                // Errores de validación
                 var errores = ModelState.Values
                     .SelectMany(v => v.Errors)
                     .Select(e => e.ErrorMessage)
@@ -63,41 +71,47 @@ namespace Prueba2Hotel.Controllers
 
                 return Ok(new { message = "Errores de validación", errores });
             }
-            UtilsCliente utilsCliente = new UtilsCliente(_appDBContext);
 
             if (cedula != cliente.Cedula)
             {
-                return Ok(new { message = "La cedula del cliente no coincide." });
+                return Ok(new { message = "La cédula del cliente no coincide." });
             }
 
-            string mensaje = utilsCliente.validacionDatosCliente(cliente);
+            UtilsCliente utilsCliente = new UtilsCliente(_appDBContext);
 
-            if (mensaje != "")
+            string mensaje = utilsCliente.validacionDatosCliente(cliente);
+            if (!string.IsNullOrEmpty(mensaje))
             {
                 return Ok(new { message = mensaje });
             }
 
+            // Buscar cliente existente en la base de datos
+            var clienteExistente = await _appDBContext.Cliente.FirstOrDefaultAsync(c => c.Cedula == cedula);
+            if (clienteExistente == null)
+            {
+                return Ok(new { message = "Cliente no encontrado." });
+            }
+
+            // Actualizar los campos necesarios
+            clienteExistente.Nombre = cliente.Nombre;
+            clienteExistente.Apellido = cliente.Apellido;
+            clienteExistente.Telefono = cliente.Telefono;
+            clienteExistente.Direccion = cliente.Direccion;
+
             try
             {
+                _appDBContext.Cliente.Update(clienteExistente);
                 await _appDBContext.SaveChangesAsync();
-                return Ok(cliente);
+                return Ok(new { message = "Cliente actualizado exitosamente.", cliente = clienteExistente });
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!ClienteExists(cedula))
-                {
-                    return Ok(new { message = "Cliente no encontrado." });
-                }
-                else 
-                {
-                    return Ok(new { message = "Error al actualizar el cliente." });
-                }
+                return Ok(new { message = "Error al actualizar el cliente." });
             }
-        }
-
-        private bool ClienteExists(string cedula)
-        {
-            return _appDBContext.Cliente.Any(c => c.Cedula == cedula);
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, new { message = ex.Message });
+            }
         }
 
         [HttpDelete("{cedula}")]
@@ -167,10 +181,6 @@ namespace Prueba2Hotel.Controllers
             {
                 return ("La cédula no es válida.");
             }
-            else if (_appDBContext.Cliente.Any(c => c.Cedula == cliente.Cedula))
-            {
-                return ("Ya existe un cliente con esa cédula." );
-            }
             else if (!long.TryParse(cliente.Cedula, out long result))
             {
                 Console.WriteLine(result);
@@ -204,10 +214,6 @@ namespace Prueba2Hotel.Controllers
             {
                 Console.WriteLine(result);
                 return ("El teléfono solo puede contener números.");
-            }
-            else if (_appDBContext.Cliente.Any(c => c.Telefono == cliente.Telefono))
-            {
-                return ("Ya existe un cliente con ese teléfono.");
             }
 
             return mensaje;
