@@ -36,9 +36,7 @@ namespace Prueba2Hotel.Controllers
                 return Ok(new { message = "Errores de validación", errores });
             }
 
-            UtilsHabitacion utilsHabitacion = new UtilsHabitacion(_appDBContext);
-
-            string mensaje = utilsHabitacion.ValidarHabitacion(habitacion);
+            string mensaje = UtilsHabitacion.ValidarHabitacion(habitacion);
 
             if (mensaje != "")
             {
@@ -46,7 +44,7 @@ namespace Prueba2Hotel.Controllers
             }
 
             // Validar que el número de habitación no exista
-            var habitacionExistente = _appDBContext.Habitacion.FirstOrDefault(h => h.NumHabitacion == habitacion.NumHabitacion);
+            var habitacionExistente = _appDBContext.Habitacion.FirstOrDefaultAsync(h => h.NumHabitacion == habitacion.NumHabitacion);
             if (habitacionExistente != null)
             {
                 return Ok(new { message = "El número de habitación ya existe." });
@@ -78,9 +76,7 @@ namespace Prueba2Hotel.Controllers
                 return Ok(new { message = "El número de la habitación no coincide." });
             }
 
-            UtilsHabitacion utilsHabitacion = new UtilsHabitacion(_appDBContext);
-
-            string mensaje = utilsHabitacion.ValidarHabitacion(habitacion);
+            string mensaje = UtilsHabitacion.ValidarHabitacion(habitacion);
             if (!string.IsNullOrEmpty(mensaje))
             {
                 return Ok(new { message = mensaje });
@@ -158,14 +154,9 @@ namespace Prueba2Hotel.Controllers
         }
     }
 
-    public class UtilsHabitacion
+    public static class UtilsHabitacion
     {
-        private readonly AppDBContext _appDBContext;
-        public UtilsHabitacion(AppDBContext appDBContext)
-        {
-            _appDBContext = appDBContext;
-        }
-        public string ValidarHabitacion(Habitacion habitacion)
+        public static string ValidarHabitacion(Habitacion habitacion)
         {
             string mensaje = "";
 

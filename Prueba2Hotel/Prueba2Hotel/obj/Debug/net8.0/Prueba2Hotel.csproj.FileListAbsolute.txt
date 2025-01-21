@@ -170,5 +170,5 @@ C:\Users\joela\source\repos\PruebaParcial2\Prueba2Hotel\Prueba2Hotel\obj\Debug\n
 C:\Users\joela\source\repos\PruebaParcial2\Prueba2Hotel\Prueba2Hotel\obj\Debug\net8.0\Prueba2Hotel.pdb
 C:\Users\joela\source\repos\PruebaParcial2\Prueba2Hotel\Prueba2Hotel\obj\Debug\net8.0\Prueba2Hotel.genruntimeconfig.cache
 C:\Users\joela\source\repos\PruebaParcial2\Prueba2Hotel\Prueba2Hotel\obj\Debug\net8.0\ref\Prueba2Hotel.dll
-C:\Users\joela\source\repos\PruebaParcial2\Prueba2Hotel\Prueba2Hotel\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\joela\source\repos\PruebaParcial2\Prueba2Hotel\Prueba2Hotel\obj\Debug\net8.0\Prueba2Hotel.sourcelink.json
+C:\Users\joela\source\repos\PruebaParcial2\Prueba2Hotel\Prueba2Hotel\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

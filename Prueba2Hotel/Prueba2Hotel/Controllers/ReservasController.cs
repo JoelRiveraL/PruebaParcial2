@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Globalization;
+using System.Text;
 
 namespace Prueba2Hotel.Controllers
 {
@@ -52,7 +54,10 @@ namespace Prueba2Hotel.Controllers
             if (idHabitacion == 0) { return Ok(new { message = "Habitacion no encontrada" }); }
             reserva.HabitacionId = idHabitacion;
 
-            string mensaje = utilsReservas.ValidarReserva(reserva);
+            string mensaje = UtilsReservas.ValidarReserva(reserva);
+            if (mensaje != "") { return Ok(new { message = mensaje }); }
+
+            mensaje = utilsReservas.ValidarFechasReserva(reserva);
             if (mensaje != "") { return Ok(new { message = mensaje }); }
 
             // Poner la habitación en estado reservada
@@ -83,11 +88,7 @@ namespace Prueba2Hotel.Controllers
 
             reserva.Id = id;
 
-            if (id != reserva.Id) { return Ok(new { message = "El ID de la reserva no coincide." }); }
-
-            UtilsReservas utilsReservas = new UtilsReservas(_appDBContext);
-
-            string mensaje = utilsReservas.ValidarReserva(reserva);
+            string mensaje = UtilsReservas.ValidarReserva(reserva);
             if (mensaje != "") { return Ok(new { message = mensaje }); }
 
             // Validar que la habitación esté disponible
@@ -98,11 +99,21 @@ namespace Prueba2Hotel.Controllers
             var cliente = await _appDBContext.Cliente.FirstOrDefaultAsync(c => c.Cedula == reserva.CedulaCliente);
             if (cliente == null) {  return Ok(new { message = "El cliente no existe." }); }
 
+            // Buscar cliente existente en la base de datos
+            var ReservaExistente = await _appDBContext.Reserva.FirstOrDefaultAsync(c => c.Id == id);
+            if (ReservaExistente == null)
+            {
+                return Ok(new { message = "Cliente no encontrado." });
+            }
+
+            ReservaExistente.Precio = reserva.Precio;
+            ReservaExistente.NumHabitacion = reserva.NumHabitacion;
+
             try
             {
-                _appDBContext.Entry(reserva).State = EntityState.Modified;
+                _appDBContext.Entry(ReservaExistente).State = EntityState.Modified;
                 await _appDBContext.SaveChangesAsync();
-                return Ok(new { message = reserva });
+                return Ok(new { message = ReservaExistente });
             }
             catch (DbUpdateConcurrencyException)
             {
@@ -164,50 +175,18 @@ namespace Prueba2Hotel.Controllers
         }
 
         // Funcion para validar todos los campos de la reserva
-        public string ValidarReserva(Reserva reserva)
+        public static string ValidarReserva(Reserva reserva)
         {
             string mensaje = ValidarIngresoDatos(reserva);
-            if (mensaje != "")
-            {
-                return mensaje;
-            }
+            if (mensaje != "") { return mensaje; }
+
+            mensaje = ValidarIngresoFechas(reserva);
+            if (mensaje != "") { return mensaje; }
 
             // Validar que la fecha de entrada sea menor a la fecha de salida
             if (reserva.Entrada >= reserva.Salida)
             {
                 return "La fecha de entrada debe ser menor a la fecha de salida.";
-            }
-
-            // Validar que la habitación no esté reservada en las fechas seleccionadas
-            var reservas = _appDBContext.Reserva.Where(r => r.HabitacionId == reserva.HabitacionId).ToList();
-            if (reservas.Count == 0)
-            {
-                return "";
-            }
-            var habitaciones = _appDBContext.Habitacion.Where(r => r.Estado == "Disponible").ToList();
-            string habitacionesDisponibles = "";
-            if (habitaciones.Count == 0)
-            {
-                habitacionesDisponibles = "No hay habitaciones disponibles";
-            }
-            else
-            {
-                habitacionesDisponibles += " Tenemos las siguientes habitaciones disponibles:";
-                foreach (var h in habitaciones)
-                {
-                    habitacionesDisponibles += " " + h.NumHabitacion;
-                }
-            }
-            foreach (var r in reservas)
-            {
-                if (reserva.Entrada >= r.Entrada && reserva.Entrada <= r.Salida)
-                {
-                    return "La habitación ya está reservada en la fecha de entrada." + habitacionesDisponibles;
-                }
-                if (reserva.Salida >= r.Entrada && reserva.Salida <= r.Salida)
-                {
-                    return "La habitación ya está reservada en la fecha de salida." + habitacionesDisponibles;
-                }
             }
 
             // Validar que el precio no se exceda del limite
@@ -260,5 +239,74 @@ namespace Prueba2Hotel.Controllers
             return habitacion.Id;
         }
 
+        public string ValidarFechasReserva(Reserva reserva)
+        {
+            // Validar que la habitación no esté reservada en las fechas seleccionadas
+            var reservas = _appDBContext.Reserva.Where(r => r.HabitacionId == reserva.HabitacionId).ToList();
+            if (reservas.Count == 0)
+            {
+                return "";
+            }
+            var habitaciones = _appDBContext.Habitacion.Where(r => r.Estado == "Disponible").ToList();
+            string habitacionesDisponibles = "";
+            if (habitaciones.Count == 0)
+            {
+                habitacionesDisponibles = "No hay habitaciones disponibles";
+            }
+            else
+            {
+                var sb = new StringBuilder();
+                sb.Append(" Tenemos las siguientes habitaciones disponibles:");
+
+                foreach (var h in habitaciones)
+                {
+                    sb.Append(" - ").Append(h.NumHabitacion);
+                }
+
+                habitacionesDisponibles = sb.ToString();
+            }
+
+            foreach (var r in reservas)
+            {
+                if (reserva.Entrada >= r.Entrada && reserva.Entrada <= r.Salida)
+                {
+                    return "La habitación ya está reservada en la fecha de entrada." + habitacionesDisponibles;
+                }
+                if (reserva.Salida >= r.Entrada && reserva.Salida <= r.Salida)
+                {
+                    return "La habitación ya está reservada en la fecha de salida." + habitacionesDisponibles;
+                }
+            }
+
+            return "";
+        }
+
+        public static string ValidarIngresoFechas(Reserva reserva)
+        {
+            string formatoEsperado = "yyyy-MM-ddTHH:mm:ss.fffZ";
+
+            if (!DateTime.TryParseExact(
+                    reserva.Entrada?.ToString(formatoEsperado),
+                    formatoEsperado,
+                    CultureInfo.InvariantCulture,
+                    DateTimeStyles.AssumeUniversal,
+                    out DateTime fechaInicio))
+            {
+                Console.WriteLine(fechaInicio);
+                return "La fecha de entrada no cumple con el formato esperado (yyyy-MM-ddTHH:mm:ss.fffZ).";
+            }
+
+            if (!DateTime.TryParseExact(
+                    reserva.Salida?.ToString(formatoEsperado),
+                    formatoEsperado,
+                    CultureInfo.InvariantCulture,
+                    DateTimeStyles.AssumeUniversal,
+                    out DateTime fechaFin))
+            {
+                Console.WriteLine(fechaFin);
+                return "La fecha de salida no cumple con el formato esperado (yyyy-MM-ddTHH:mm:ss.fffZ).";
+            }
+            return "";
+        }
     }
 }

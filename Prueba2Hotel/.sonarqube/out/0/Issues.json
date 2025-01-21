@@ -14,7 +14,7 @@
         {
           "ruleId": "CS8618",
           "level": "warning",
-          "message": "Non-nullable property 'Cliente' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "message": "Non-nullable property 'Reserva' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
           "suppressionStates": [
             "suppressedInSource"
           ],
@@ -23,9 +23,9 @@
               "resultFile": {
                 "uri": "file:///C:/Users/joela/source/repos/PruebaParcial2/Prueba2Hotel/Prueba2Hotel/AppDBContext.cs",
                 "region": {
-                  "startLine": 13,
+                  "startLine": 9,
                   "startColumn": 16,
-                  "endLine": 13,
+                  "endLine": 9,
                   "endColumn": 28
                 }
               }
@@ -36,9 +36,46 @@
               "physicalLocation": {
                 "uri": "file:///C:/Users/joela/source/repos/PruebaParcial2/Prueba2Hotel/Prueba2Hotel/AppDBContext.cs",
                 "region": {
-                  "startLine": 15,
+                  "startLine": 11,
                   "startColumn": 31,
-                  "endLine": 15,
+                  "endLine": 11,
+                  "endColumn": 38
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Cliente' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/joela/source/repos/PruebaParcial2/Prueba2Hotel/Prueba2Hotel/AppDBContext.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 16,
+                  "endLine": 9,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/joela/source/repos/PruebaParcial2/Prueba2Hotel/Prueba2Hotel/AppDBContext.cs",
+                "region": {
+                  "startLine": 12,
+                  "startColumn": 31,
+                  "endLine": 12,
                   "endColumn": 38
                 }
               }
@@ -60,9 +97,9 @@
               "resultFile": {
                 "uri": "file:///C:/Users/joela/source/repos/PruebaParcial2/Prueba2Hotel/Prueba2Hotel/AppDBContext.cs",
                 "region": {
-                  "startLine": 13,
+                  "startLine": 9,
                   "startColumn": 16,
-                  "endLine": 13,
+                  "endLine": 9,
                   "endColumn": 28
                 }
               }
@@ -73,47 +110,10 @@
               "physicalLocation": {
                 "uri": "file:///C:/Users/joela/source/repos/PruebaParcial2/Prueba2Hotel/Prueba2Hotel/AppDBContext.cs",
                 "region": {
-                  "startLine": 16,
+                  "startLine": 13,
                   "startColumn": 34,
-                  "endLine": 16,
-                  "endColumn": 44
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8618",
-          "level": "warning",
-          "message": "Non-nullable property 'Reserva' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
-          "suppressionStates": [
-            "suppressedInSource"
-          ],
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/joela/source/repos/PruebaParcial2/Prueba2Hotel/Prueba2Hotel/AppDBContext.cs",
-                "region": {
-                  "startLine": 13,
-                  "startColumn": 16,
                   "endLine": 13,
-                  "endColumn": 28
-                }
-              }
-            }
-          ],
-          "relatedLocations": [
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/joela/source/repos/PruebaParcial2/Prueba2Hotel/Prueba2Hotel/AppDBContext.cs",
-                "region": {
-                  "startLine": 17,
-                  "startColumn": 31,
-                  "endLine": 17,
-                  "endColumn": 38
+                  "endColumn": 44
                 }
               }
             }
@@ -134,9 +134,9 @@
               "resultFile": {
                 "uri": "file:///C:/Users/joela/source/repos/PruebaParcial2/Prueba2Hotel/Prueba2Hotel/AppDBContext.cs",
                 "region": {
-                  "startLine": 13,
+                  "startLine": 9,
                   "startColumn": 16,
-                  "endLine": 13,
+                  "endLine": 9,
                   "endColumn": 28
                 }
               }
@@ -147,9 +147,9 @@
               "physicalLocation": {
                 "uri": "file:///C:/Users/joela/source/repos/PruebaParcial2/Prueba2Hotel/Prueba2Hotel/AppDBContext.cs",
                 "region": {
-                  "startLine": 18,
+                  "startLine": 14,
                   "startColumn": 44,
-                  "endLine": 18,
+                  "endLine": 14,
                   "endColumn": 64
                 }
               }
@@ -162,16 +162,16 @@
         {
           "ruleId": "S1192",
           "level": "warning",
-          "message": "Define a constant instead of using this literal 'SqlServer:Identity' 4 times.",
+          "message": "Define a constant instead of using this literal 'nvarchar(100)' 4 times.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/joela/source/repos/PruebaParcial2/Prueba2Hotel/Prueba2Hotel/Migrations/20250116215109_CreationDatabase.cs",
+                "uri": "file:///C:/Users/joela/source/repos/PruebaParcial2/Prueba2Hotel/Prueba2Hotel/Migrations/20250117221358_ActualizacionEstado2.cs",
                 "region": {
-                  "startLine": 19,
-                  "startColumn": 37,
-                  "endLine": 19,
-                  "endColumn": 57
+                  "startLine": 16,
+                  "startColumn": 23,
+                  "endLine": 16,
+                  "endColumn": 38
                 }
               }
             }
@@ -179,34 +179,34 @@
           "relatedLocations": [
             {
               "physicalLocation": {
-                "uri": "file:///C:/Users/joela/source/repos/PruebaParcial2/Prueba2Hotel/Prueba2Hotel/Migrations/20250116215109_CreationDatabase.cs",
+                "uri": "file:///C:/Users/joela/source/repos/PruebaParcial2/Prueba2Hotel/Prueba2Hotel/Migrations/20250117221358_ActualizacionEstado2.cs",
+                "region": {
+                  "startLine": 20,
+                  "startColumn": 26,
+                  "endLine": 20,
+                  "endColumn": 41
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/joela/source/repos/PruebaParcial2/Prueba2Hotel/Prueba2Hotel/Migrations/20250117221358_ActualizacionEstado2.cs",
+                "region": {
+                  "startLine": 30,
+                  "startColumn": 23,
+                  "endLine": 30,
+                  "endColumn": 38
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/joela/source/repos/PruebaParcial2/Prueba2Hotel/Prueba2Hotel/Migrations/20250117221358_ActualizacionEstado2.cs",
                 "region": {
                   "startLine": 35,
-                  "startColumn": 37,
+                  "startColumn": 26,
                   "endLine": 35,
-                  "endColumn": 57
-                }
-              }
-            },
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/joela/source/repos/PruebaParcial2/Prueba2Hotel/Prueba2Hotel/Migrations/20250116215109_CreationDatabase.cs",
-                "region": {
-                  "startLine": 51,
-                  "startColumn": 37,
-                  "endLine": 51,
-                  "endColumn": 57
-                }
-              }
-            },
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/joela/source/repos/PruebaParcial2/Prueba2Hotel/Prueba2Hotel/Migrations/20250116215109_CreationDatabase.cs",
-                "region": {
-                  "startLine": 80,
-                  "startColumn": 37,
-                  "endLine": 80,
-                  "endColumn": 57
+                  "endColumn": 41
                 }
               }
             }
@@ -223,16 +223,16 @@
         {
           "ruleId": "S1192",
           "level": "warning",
-          "message": "Define a constant instead of using this literal 'nvarchar(max)' 7 times.",
+          "message": "Define a constant instead of using this literal 'Reserva' 4 times.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/joela/source/repos/PruebaParcial2/Prueba2Hotel/Prueba2Hotel/Migrations/20250116215109_CreationDatabase.cs",
+                "uri": "file:///C:/Users/joela/source/repos/PruebaParcial2/Prueba2Hotel/Prueba2Hotel/Migrations/20250118135810_ActualizacionReservas.cs",
                 "region": {
-                  "startLine": 20,
-                  "startColumn": 57,
-                  "endLine": 20,
-                  "endColumn": 72
+                  "startLine": 15,
+                  "startColumn": 24,
+                  "endLine": 15,
+                  "endColumn": 33
                 }
               }
             }
@@ -240,67 +240,34 @@
           "relatedLocations": [
             {
               "physicalLocation": {
-                "uri": "file:///C:/Users/joela/source/repos/PruebaParcial2/Prueba2Hotel/Prueba2Hotel/Migrations/20250116215109_CreationDatabase.cs",
-                "region": {
-                  "startLine": 21,
-                  "startColumn": 59,
-                  "endLine": 21,
-                  "endColumn": 74
-                }
-              }
-            },
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/joela/source/repos/PruebaParcial2/Prueba2Hotel/Prueba2Hotel/Migrations/20250116215109_CreationDatabase.cs",
-                "region": {
-                  "startLine": 22,
-                  "startColumn": 57,
-                  "endLine": 22,
-                  "endColumn": 72
-                }
-              }
-            },
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/joela/source/repos/PruebaParcial2/Prueba2Hotel/Prueba2Hotel/Migrations/20250116215109_CreationDatabase.cs",
+                "uri": "file:///C:/Users/joela/source/repos/PruebaParcial2/Prueba2Hotel/Prueba2Hotel/Migrations/20250118135810_ActualizacionReservas.cs",
                 "region": {
                   "startLine": 23,
-                  "startColumn": 59,
+                  "startColumn": 24,
                   "endLine": 23,
-                  "endColumn": 74
+                  "endColumn": 33
                 }
               }
             },
             {
               "physicalLocation": {
-                "uri": "file:///C:/Users/joela/source/repos/PruebaParcial2/Prueba2Hotel/Prueba2Hotel/Migrations/20250116215109_CreationDatabase.cs",
+                "uri": "file:///C:/Users/joela/source/repos/PruebaParcial2/Prueba2Hotel/Prueba2Hotel/Migrations/20250118135810_ActualizacionReservas.cs",
                 "region": {
-                  "startLine": 36,
-                  "startColumn": 55,
-                  "endLine": 36,
-                  "endColumn": 70
+                  "startLine": 35,
+                  "startColumn": 24,
+                  "endLine": 35,
+                  "endColumn": 33
                 }
               }
             },
             {
               "physicalLocation": {
-                "uri": "file:///C:/Users/joela/source/repos/PruebaParcial2/Prueba2Hotel/Prueba2Hotel/Migrations/20250116215109_CreationDatabase.cs",
+                "uri": "file:///C:/Users/joela/source/repos/PruebaParcial2/Prueba2Hotel/Prueba2Hotel/Migrations/20250118135810_ActualizacionReservas.cs",
                 "region": {
-                  "startLine": 54,
-                  "startColumn": 56,
-                  "endLine": 54,
-                  "endColumn": 71
-                }
-              }
-            },
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/joela/source/repos/PruebaParcial2/Prueba2Hotel/Prueba2Hotel/Migrations/20250116215109_CreationDatabase.cs",
-                "region": {
-                  "startLine": 82,
-                  "startColumn": 62,
-                  "endLine": 82,
-                  "endColumn": 77
+                  "startLine": 39,
+                  "startColumn": 24,
+                  "endLine": 39,
+                  "endColumn": 33
                 }
               }
             }
@@ -310,83 +277,7 @@
             "customProperties": {
               "0": null,
               "1": null,
-              "2": null,
-              "3": null,
-              "4": null,
-              "5": null
-            }
-          }
-        },
-        {
-          "ruleId": "S1192",
-          "level": "warning",
-          "message": "Define a constant instead of using this literal 'Reserva' 5 times.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/joela/source/repos/PruebaParcial2/Prueba2Hotel/Prueba2Hotel/Migrations/20250116215109_CreationDatabase.cs",
-                "region": {
-                  "startLine": 47,
-                  "startColumn": 23,
-                  "endLine": 47,
-                  "endColumn": 32
-                }
-              }
-            }
-          ],
-          "relatedLocations": [
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/joela/source/repos/PruebaParcial2/Prueba2Hotel/Prueba2Hotel/Migrations/20250116215109_CreationDatabase.cs",
-                "region": {
-                  "startLine": 91,
-                  "startColumn": 41,
-                  "endLine": 91,
-                  "endColumn": 50
-                }
-              }
-            },
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/joela/source/repos/PruebaParcial2/Prueba2Hotel/Prueba2Hotel/Migrations/20250116215109_CreationDatabase.cs",
-                "region": {
-                  "startLine": 98,
-                  "startColumn": 24,
-                  "endLine": 98,
-                  "endColumn": 33
-                }
-              }
-            },
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/joela/source/repos/PruebaParcial2/Prueba2Hotel/Prueba2Hotel/Migrations/20250116215109_CreationDatabase.cs",
-                "region": {
-                  "startLine": 103,
-                  "startColumn": 24,
-                  "endLine": 103,
-                  "endColumn": 33
-                }
-              }
-            },
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/joela/source/repos/PruebaParcial2/Prueba2Hotel/Prueba2Hotel/Migrations/20250116215109_CreationDatabase.cs",
-                "region": {
-                  "startLine": 119,
-                  "startColumn": 23,
-                  "endLine": 119,
-                  "endColumn": 32
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1,
-            "customProperties": {
-              "0": null,
-              "1": null,
-              "2": null,
-              "3": null
+              "2": null
             }
           }
         }

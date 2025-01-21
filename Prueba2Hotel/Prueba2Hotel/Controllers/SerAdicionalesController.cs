@@ -19,7 +19,7 @@ namespace Prueba2Hotel.Controllers
         [HttpGet]
         public async Task<IActionResult> GetServicios()
         {
-            return Ok(await _appDBContext.ServiciosAdicionales.ToListAsync());
+            return Ok(await _appDBContext.ServiciosAdicionales.Select(r => new { r.Id, r.ReservaId, r.Descripcion, r.Costo}).ToListAsync());
         }
 
         [HttpPost]

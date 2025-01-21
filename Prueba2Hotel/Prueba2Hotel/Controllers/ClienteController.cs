@@ -36,20 +36,19 @@ namespace Prueba2Hotel.Controllers
 
                 return Ok(new { message = "Errores de validación", errores });
             }
-            UtilsCliente utilsCliente = new UtilsCliente(_appDBContext);
 
-            string mensaje = utilsCliente.validacionDatosCliente(cliente);
+            string mensaje = UtilsCliente.ValidacionDatosCliente(cliente);
 
             if (mensaje != "")
             {
                 return Ok(new { message = mensaje });
             }
 
-            if (_appDBContext.Cliente.Any(c => c.Cedula == cliente.Cedula))
+            if (await _appDBContext.Cliente.AnyAsync(c => c.Cedula == cliente.Cedula))
             {
                 return Ok(new { message = "Ya existe un cliente con esa cédula." });
             }
-            if (_appDBContext.Cliente.Any(c => c.Telefono == cliente.Telefono))
+            if (await _appDBContext.Cliente.AnyAsync(c => c.Telefono == cliente.Telefono))
             {
                 return Ok(new { message = "Ya existe un cliente con ese teléfono." });
             }
@@ -77,9 +76,7 @@ namespace Prueba2Hotel.Controllers
                 return Ok(new { message = "La cédula del cliente no coincide." });
             }
 
-            UtilsCliente utilsCliente = new UtilsCliente(_appDBContext);
-
-            string mensaje = utilsCliente.validacionDatosCliente(cliente);
+            string mensaje = UtilsCliente.ValidacionDatosCliente(cliente);
             if (!string.IsNullOrEmpty(mensaje))
             {
                 return Ok(new { message = mensaje });
@@ -95,6 +92,7 @@ namespace Prueba2Hotel.Controllers
             // Actualizar los campos necesarios
             clienteExistente.Nombre = cliente.Nombre;
             clienteExistente.Apellido = cliente.Apellido;
+            clienteExistente.Correo = cliente.Correo;
             clienteExistente.Telefono = cliente.Telefono;
             clienteExistente.Direccion = cliente.Direccion;
 
@@ -122,27 +120,28 @@ namespace Prueba2Hotel.Controllers
             {
                 return Ok(new { message = "Cliente no encontrado." });
             }
-
+            
+            var reservasRelacionadas = await _appDBContext.Reserva.AnyAsync(r => r.CedulaCliente == cedula);
+            if (reservasRelacionadas)
+            {
+                return Ok(new { message = "No se puede eliminar el cliente porque tiene reservas." });
+            }
             _appDBContext.Cliente.Remove(cliente);
             await _appDBContext.SaveChangesAsync();
             return Ok(cliente);
         }
     }
 
-    public partial class UtilsCliente
+    public static partial class UtilsCliente
     {
-
-        private readonly AppDBContext _appDBContext;
-
-        public UtilsCliente(AppDBContext appDBContext)
-        {
-            _appDBContext = appDBContext;
-        }
 
         [GeneratedRegex(@"^[a-zA-Z\s]+$")]
         private static partial Regex LetrasYEspaciosRegex();
 
-        public static bool validarCedula(string cedula)
+        [GeneratedRegex(@"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,7}$")]
+        private static partial Regex EmailValidationRegex();
+
+        public static bool ValidarCedula(string cedula)
         {
             if (cedula.Length != 10)
             {
@@ -161,7 +160,7 @@ namespace Prueba2Hotel.Controllers
             return (resultado != verificador);
         }
 
-        public string validacionDatosCliente(Cliente cliente )
+        public static string ValidacionDatosCliente(Cliente cliente )
         {
 
             string mensaje = "";
@@ -177,7 +176,7 @@ namespace Prueba2Hotel.Controllers
             {
                 return ("La cédula debe tener 10 dígitos.");
             }
-            else if (validarCedula(cliente.Cedula))
+            else if (ValidarCedula(cliente.Cedula))
             {
                 return ("La cédula no es válida.");
             }
@@ -199,10 +198,9 @@ namespace Prueba2Hotel.Controllers
             }
 
             // Validar que el correo
-            if (!cliente.Correo.Contains('@'))
-            {
-                return "El correo no es valido.";
-            }
+            bool correoValido = EmailValidationRegex().IsMatch(cliente.Correo);
+
+            if (!correoValido){ return "El correo no es valido."; }
 
 
             //Validar telefono

@@ -1,13 +1,18 @@
-ë
+÷
+ C:\Users\joela\source\repos\PruebaParcial2\Prueba2Hotel\Prueba2Hotel\obj\Debug\net8.0\System.Text.RegularExpressions.Generator\System.Text.RegularExpressions.Generator.RegexGenerator\RegexGenerator.g.csutf-8ë
 ÖC:\Users\joela\source\repos\PruebaParcial2\Prueba2Hotel\Prueba2Hotel\obj\Debug\net8.0\Prueba2Hotel.MvcApplicationPartsAssemblyInfo.csutf-8}
 rC:\Users\joela\source\repos\PruebaParcial2\Prueba2Hotel\Prueba2Hotel\obj\Debug\net8.0\Prueba2Hotel.AssemblyInfo.csutf-8ê
 ÑC:\Users\joela\source\repos\PruebaParcial2\Prueba2Hotel\Prueba2Hotel\obj\Debug\net8.0\.NETCoreApp,Version=v8.0.AssemblyAttributes.csutf-8
-tC:\Users\joela\source\repos\PruebaParcial2\Prueba2Hotel\Prueba2Hotel\obj\Debug\net8.0\Prueba2Hotel.GlobalUsings.g.csutf-8i
-`C:\Users\joela\source\repos\PruebaParcial2\Prueba2Hotel\Prueba2Hotel\SerAdicionalesController.csutf-8X
+tC:\Users\joela\source\repos\PruebaParcial2\Prueba2Hotel\Prueba2Hotel\obj\Debug\net8.0\Prueba2Hotel.GlobalUsings.g.csutf-8X
 OC:\Users\joela\source\repos\PruebaParcial2\Prueba2Hotel\Prueba2Hotel\Program.csutf-8w
-lC:\Users\joela\source\repos\PruebaParcial2\Prueba2Hotel\Prueba2Hotel\Migrations\AppDBContextModelSnapshot.csutf-8Ü
-{C:\Users\joela\source\repos\PruebaParcial2\Prueba2Hotel\Prueba2Hotel\Migrations\20250116215109_CreationDatabase.Designer.csutf-8{
-rC:\Users\joela\source\repos\PruebaParcial2\Prueba2Hotel\Prueba2Hotel\Migrations\20250116215109_CreationDatabase.csutf-8o
+lC:\Users\joela\source\repos\PruebaParcial2\Prueba2Hotel\Prueba2Hotel\Migrations\AppDBContextModelSnapshot.csutf-8å
+ÄC:\Users\joela\source\repos\PruebaParcial2\Prueba2Hotel\Prueba2Hotel\Migrations\20250118135810_ActualizacionReservas.Designer.csutf-8Ä
+wC:\Users\joela\source\repos\PruebaParcial2\Prueba2Hotel\Prueba2Hotel\Migrations\20250118135810_ActualizacionReservas.csutf-8ä
+C:\Users\joela\source\repos\PruebaParcial2\Prueba2Hotel\Prueba2Hotel\Migrations\20250117221358_ActualizacionEstado2.Designer.csutf-8
+vC:\Users\joela\source\repos\PruebaParcial2\Prueba2Hotel\Prueba2Hotel\Migrations\20250117221358_ActualizacionEstado2.csutf-8â
+~C:\Users\joela\source\repos\PruebaParcial2\Prueba2Hotel\Prueba2Hotel\Migrations\20250117220334_ActualizacionEstado.Designer.csutf-8~
+uC:\Users\joela\source\repos\PruebaParcial2\Prueba2Hotel\Prueba2Hotel\Migrations\20250117220334_ActualizacionEstado.csutf-8u
+lC:\Users\joela\source\repos\PruebaParcial2\Prueba2Hotel\Prueba2Hotel\Controllers\SerAdicionalesController.csutf-8o
 fC:\Users\joela\source\repos\PruebaParcial2\Prueba2Hotel\Prueba2Hotel\Controllers\ReservasController.csutf-8q
 hC:\Users\joela\source\repos\PruebaParcial2\Prueba2Hotel\Prueba2Hotel\Controllers\HabitacionController.csutf-8n
 eC:\Users\joela\source\repos\PruebaParcial2\Prueba2Hotel\Prueba2Hotel\Controllers\ClienteController.csutf-8]
