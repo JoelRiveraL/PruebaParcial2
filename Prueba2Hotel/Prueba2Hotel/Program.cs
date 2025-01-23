@@ -12,12 +12,25 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// Configurar CORS
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowSpecificOrigin", builder =>
+    {
+        builder.WithOrigins("http://localhost:3000") // Dominio del frontend
+               .AllowAnyHeader() // Permite cualquier encabezado
+               .AllowAnyMethod() // Permite cualquier método HTTP (GET, POST, etc.)
+               .AllowCredentials(); // Permite enviar cookies o credenciales si es necesario
+    });
+});
+
+// Configurar base de datos
 DotEnv.Load();
 var defaultConnection = Environment.GetEnvironmentVariable("DEFAULT_CONNECTION");
 builder.Services.AddDbContext<AppDBContext>(options =>
     options.UseSqlServer(defaultConnection));
 
-//Validar el modelo en la peticion
+// Validar el modelo en la petición
 builder.Services.Configure<ApiBehaviorOptions>(options =>
 {
     options.SuppressModelStateInvalidFilter = true;
@@ -31,6 +44,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+// Aplicar la política de CORS
+app.UseCors("AllowSpecificOrigin");
 
 app.UseAuthorization();
 

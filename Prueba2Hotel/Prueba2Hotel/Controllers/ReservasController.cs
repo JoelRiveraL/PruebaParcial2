@@ -149,9 +149,9 @@ namespace Prueba2Hotel.Controllers
 
                 // Eliminar los servicios adicionales relacionados a la reserva
                 var servicios = await _appDBContext.ServiciosAdicionales.Where(s => s.ReservaId == id).ToListAsync();
-                foreach (var s in servicios)
+                if (servicios.Count > 0)
                 {
-                    _appDBContext.ServiciosAdicionales.Remove(s);
+                    return Ok(new { message = "No se puede eliminar la reserva porque tiene servicios adicionales." });
                 }
 
                 _appDBContext.Reserva.Remove(reserva);

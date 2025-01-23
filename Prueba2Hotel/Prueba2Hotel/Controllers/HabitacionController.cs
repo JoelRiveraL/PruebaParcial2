@@ -43,13 +43,6 @@ namespace Prueba2Hotel.Controllers
                 return Ok(new { message = mensaje });
             }
 
-            // Validar que el número de habitación no exista
-            var habitacionExistente = _appDBContext.Habitacion.FirstOrDefaultAsync(h => h.NumHabitacion == habitacion.NumHabitacion);
-            if (habitacionExistente != null)
-            {
-                return Ok(new { message = "El número de habitación ya existe." });
-            }
-
             habitacion.Estado = "Disponible";
 
             _appDBContext.Habitacion.Add(habitacion);

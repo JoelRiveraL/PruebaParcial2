@@ -3,28 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\joela\\source\\repos\\PruebaParcial2\\Prueba2Hotel\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{43445187-9E0A-493E-BACD-D569912730A6}|Prueba2Hotel\\Prueba2Hotel.csproj|c:\\users\\joela\\source\\repos\\pruebaparcial2\\prueba2hotel\\prueba2hotel\\controllers\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{43445187-9E0A-493E-BACD-D569912730A6}|Prueba2Hotel\\Prueba2Hotel.csproj|solutionrelative:prueba2hotel\\controllers\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{43445187-9E0A-493E-BACD-D569912730A6}|Prueba2Hotel\\Prueba2Hotel.csproj|c:\\users\\joela\\source\\repos\\pruebaparcial2\\prueba2hotel\\prueba2hotel\\controllers\\reservascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{43445187-9E0A-493E-BACD-D569912730A6}|Prueba2Hotel\\Prueba2Hotel.csproj|solutionrelative:prueba2hotel\\controllers\\reservascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{43445187-9E0A-493E-BACD-D569912730A6}|Prueba2Hotel\\Prueba2Hotel.csproj|c:\\users\\joela\\source\\repos\\pruebaparcial2\\prueba2hotel\\prueba2hotel\\controllers\\habitacioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{43445187-9E0A-493E-BACD-D569912730A6}|Prueba2Hotel\\Prueba2Hotel.csproj|solutionrelative:prueba2hotel\\controllers\\habitacioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{43445187-9E0A-493E-BACD-D569912730A6}|Prueba2Hotel\\Prueba2Hotel.csproj|c:\\users\\joela\\source\\repos\\pruebaparcial2\\prueba2hotel\\prueba2hotel\\controllers\\seradicionalescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{43445187-9E0A-493E-BACD-D569912730A6}|Prueba2Hotel\\Prueba2Hotel.csproj|solutionrelative:prueba2hotel\\controllers\\seradicionalescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{43445187-9E0A-493E-BACD-D569912730A6}|Prueba2Hotel\\Prueba2Hotel.csproj|c:\\users\\joela\\source\\repos\\pruebaparcial2\\prueba2hotel\\prueba2hotel\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43445187-9E0A-493E-BACD-D569912730A6}|Prueba2Hotel\\Prueba2Hotel.csproj|solutionrelative:prueba2hotel\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{43445187-9E0A-493E-BACD-D569912730A6}|Prueba2Hotel\\Prueba2Hotel.csproj|c:\\users\\joela\\source\\repos\\pruebaparcial2\\prueba2hotel\\prueba2hotel\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{43445187-9E0A-493E-BACD-D569912730A6}|Prueba2Hotel\\Prueba2Hotel.csproj|solutionrelative:prueba2hotel\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{43445187-9E0A-493E-BACD-D569912730A6}|Prueba2Hotel\\Prueba2Hotel.csproj|c:\\users\\joela\\source\\repos\\pruebaparcial2\\prueba2hotel\\prueba2hotel\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{43445187-9E0A-493E-BACD-D569912730A6}|Prueba2Hotel\\Prueba2Hotel.csproj|solutionrelative:prueba2hotel\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{43445187-9E0A-493E-BACD-D569912730A6}|Prueba2Hotel\\Prueba2Hotel.csproj|c:\\users\\joela\\source\\repos\\pruebaparcial2\\prueba2hotel\\prueba2hotel\\controllers\\habitacioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43445187-9E0A-493E-BACD-D569912730A6}|Prueba2Hotel\\Prueba2Hotel.csproj|solutionrelative:prueba2hotel\\controllers\\habitacioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43445187-9E0A-493E-BACD-D569912730A6}|Prueba2Hotel\\Prueba2Hotel.csproj|c:\\users\\joela\\source\\repos\\pruebaparcial2\\prueba2hotel\\prueba2hotel\\controllers\\reservascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43445187-9E0A-493E-BACD-D569912730A6}|Prueba2Hotel\\Prueba2Hotel.csproj|solutionrelative:prueba2hotel\\controllers\\reservascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43445187-9E0A-493E-BACD-D569912730A6}|Prueba2Hotel\\Prueba2Hotel.csproj|c:\\users\\joela\\source\\repos\\pruebaparcial2\\prueba2hotel\\prueba2hotel\\controllers\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43445187-9E0A-493E-BACD-D569912730A6}|Prueba2Hotel\\Prueba2Hotel.csproj|solutionrelative:prueba2hotel\\controllers\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43445187-9E0A-493E-BACD-D569912730A6}|Prueba2Hotel\\Prueba2Hotel.csproj|c:\\users\\joela\\source\\repos\\pruebaparcial2\\prueba2hotel\\prueba2hotel\\controllers\\seradicionalescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43445187-9E0A-493E-BACD-D569912730A6}|Prueba2Hotel\\Prueba2Hotel.csproj|solutionrelative:prueba2hotel\\controllers\\seradicionalescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
@@ -44,27 +44,25 @@
               "RelativeDocumentMoniker": "Prueba2Hotel\\Controllers\\HabitacionController.cs",
               "ToolTip": "C:\\Users\\joela\\source\\repos\\PruebaParcial2\\Prueba2Hotel\\Prueba2Hotel\\Controllers\\HabitacionController.cs",
               "RelativeToolTip": "Prueba2Hotel\\Controllers\\HabitacionController.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAhwC4AAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAACAAAAAAAAAAAAAwwCwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-19T23:14:24.715Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-19T23:14:24.715Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "ReservasController.cs",
               "DocumentMoniker": "C:\\Users\\joela\\source\\repos\\PruebaParcial2\\Prueba2Hotel\\Prueba2Hotel\\Controllers\\ReservasController.cs",
               "RelativeDocumentMoniker": "Prueba2Hotel\\Controllers\\ReservasController.cs",
               "ToolTip": "C:\\Users\\joela\\source\\repos\\PruebaParcial2\\Prueba2Hotel\\Prueba2Hotel\\Controllers\\ReservasController.cs",
               "RelativeToolTip": "Prueba2Hotel\\Controllers\\ReservasController.cs",
-              "ViewState": "AgIAAIIAAAAAAAAAAAAcwJQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAIsAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-17T22:17:04.633Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-17T22:17:04.633Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "SerAdicionalesController.cs",
               "DocumentMoniker": "C:\\Users\\joela\\source\\repos\\PruebaParcial2\\Prueba2Hotel\\Prueba2Hotel\\Controllers\\SerAdicionalesController.cs",
               "RelativeDocumentMoniker": "Prueba2Hotel\\Controllers\\SerAdicionalesController.cs",
@@ -76,40 +74,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "ClienteController.cs",
               "DocumentMoniker": "C:\\Users\\joela\\source\\repos\\PruebaParcial2\\Prueba2Hotel\\Prueba2Hotel\\Controllers\\ClienteController.cs",
               "RelativeDocumentMoniker": "Prueba2Hotel\\Controllers\\ClienteController.cs",
               "ToolTip": "C:\\Users\\joela\\source\\repos\\PruebaParcial2\\Prueba2Hotel\\Prueba2Hotel\\Controllers\\ClienteController.cs",
               "RelativeToolTip": "Prueba2Hotel\\Controllers\\ClienteController.cs",
-              "ViewState": "AgIAAGsAAAAAAAAAAAAqwHYAAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAwwBAAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-19T21:46:22.708Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-19T21:46:22.708Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "AppDBContext.cs",
               "DocumentMoniker": "C:\\Users\\joela\\source\\repos\\PruebaParcial2\\Prueba2Hotel\\Prueba2Hotel\\AppDBContext.cs",
               "RelativeDocumentMoniker": "Prueba2Hotel\\AppDBContext.cs",
               "ToolTip": "C:\\Users\\joela\\source\\repos\\PruebaParcial2\\Prueba2Hotel\\Prueba2Hotel\\AppDBContext.cs",
               "RelativeToolTip": "Prueba2Hotel\\AppDBContext.cs",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAAAH4AAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-17T19:45:12.597Z"
+              "WhenOpened": "2025-01-17T19:45:12.597Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\joela\\source\\repos\\PruebaParcial2\\Prueba2Hotel\\Prueba2Hotel\\Program.cs",
               "RelativeDocumentMoniker": "Prueba2Hotel\\Program.cs",
-              "ToolTip": "C:\\Users\\joela\\source\\repos\\PruebaParcial2\\Prueba2Hotel\\Prueba2Hotel\\Program.cs",
-              "RelativeToolTip": "Prueba2Hotel\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABRAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\joela\\source\\repos\\PruebaParcial2\\Prueba2Hotel\\Prueba2Hotel\\Program.cs*",
+              "RelativeToolTip": "Prueba2Hotel\\Program.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-16T21:15:51.79Z"
+              "WhenOpened": "2025-01-16T21:15:51.79Z",
+              "EditorCaption": ""
             }
           ]
         }

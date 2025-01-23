@@ -162,67 +162,6 @@
         {
           "ruleId": "S1192",
           "level": "warning",
-          "message": "Define a constant instead of using this literal 'nvarchar(100)' 4 times.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/joela/source/repos/PruebaParcial2/Prueba2Hotel/Prueba2Hotel/Migrations/20250117221358_ActualizacionEstado2.cs",
-                "region": {
-                  "startLine": 16,
-                  "startColumn": 23,
-                  "endLine": 16,
-                  "endColumn": 38
-                }
-              }
-            }
-          ],
-          "relatedLocations": [
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/joela/source/repos/PruebaParcial2/Prueba2Hotel/Prueba2Hotel/Migrations/20250117221358_ActualizacionEstado2.cs",
-                "region": {
-                  "startLine": 20,
-                  "startColumn": 26,
-                  "endLine": 20,
-                  "endColumn": 41
-                }
-              }
-            },
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/joela/source/repos/PruebaParcial2/Prueba2Hotel/Prueba2Hotel/Migrations/20250117221358_ActualizacionEstado2.cs",
-                "region": {
-                  "startLine": 30,
-                  "startColumn": 23,
-                  "endLine": 30,
-                  "endColumn": 38
-                }
-              }
-            },
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/joela/source/repos/PruebaParcial2/Prueba2Hotel/Prueba2Hotel/Migrations/20250117221358_ActualizacionEstado2.cs",
-                "region": {
-                  "startLine": 35,
-                  "startColumn": 26,
-                  "endLine": 35,
-                  "endColumn": 41
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1,
-            "customProperties": {
-              "0": null,
-              "1": null,
-              "2": null
-            }
-          }
-        },
-        {
-          "ruleId": "S1192",
-          "level": "warning",
           "message": "Define a constant instead of using this literal 'Reserva' 4 times.",
           "locations": [
             {
@@ -268,6 +207,67 @@
                   "startColumn": 24,
                   "endLine": 39,
                   "endColumn": 33
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'nvarchar(100)' 4 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/joela/source/repos/PruebaParcial2/Prueba2Hotel/Prueba2Hotel/Migrations/20250117221358_ActualizacionEstado2.cs",
+                "region": {
+                  "startLine": 16,
+                  "startColumn": 23,
+                  "endLine": 16,
+                  "endColumn": 38
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/joela/source/repos/PruebaParcial2/Prueba2Hotel/Prueba2Hotel/Migrations/20250117221358_ActualizacionEstado2.cs",
+                "region": {
+                  "startLine": 20,
+                  "startColumn": 26,
+                  "endLine": 20,
+                  "endColumn": 41
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/joela/source/repos/PruebaParcial2/Prueba2Hotel/Prueba2Hotel/Migrations/20250117221358_ActualizacionEstado2.cs",
+                "region": {
+                  "startLine": 30,
+                  "startColumn": 23,
+                  "endLine": 30,
+                  "endColumn": 38
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/joela/source/repos/PruebaParcial2/Prueba2Hotel/Prueba2Hotel/Migrations/20250117221358_ActualizacionEstado2.cs",
+                "region": {
+                  "startLine": 35,
+                  "startColumn": 26,
+                  "endLine": 35,
+                  "endColumn": 41
                 }
               }
             }

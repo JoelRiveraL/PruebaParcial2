@@ -2,5 +2,5 @@ projectKey=Prueba2-Hotel
 serverUrl=http://localhost:9000
 serverVersion=25.1.0.102122
 dashboardUrl=http://localhost:9000/dashboard?id=Prueba2-Hotel
-ceTaskId=23bd9b21-de05-4a69-9231-20384369dd21
-ceTaskUrl=http://localhost:9000/api/ce/task?id=23bd9b21-de05-4a69-9231-20384369dd21
+ceTaskId=a60390a1-d768-4f30-91e4-e4eccbcb0def
+ceTaskUrl=http://localhost:9000/api/ce/task?id=a60390a1-d768-4f30-91e4-e4eccbcb0def
